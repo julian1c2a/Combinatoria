@@ -1,0 +1,58 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+++      "name": "C/C++ Runner: Debug Session",
+      "name": "Debug with g++",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/../build/${fileBasenameNoExtension}-gcc.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "e:/Dropbox/GitHub/CppProjects/NumericAlgorithms/NumericAlgorithms/Combinatoria",
+      "program": "e:/Dropbox/GitHub/CppProjects/NumericAlgorithms/NumericAlgorithms/Combinatoria/build/Debug/outDebug",
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "miDebuggerPath": "c:\\msys64\\ucrt64\\bin\\gdb.exe",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+      ],
+      "preLaunchTask": "Build with g++"
+    },
+    {
+      "type": "cmake",
+      "name": "Debug with clang++",
+      "type": "cppdbg",
+      "request": "launch",
+      "name": "Debug portfile(s)",
+      "cmakeDebugType": "external",
+      "pipeName": "\\\\.\\pipe\\vcpkg_ext_portfile_dbg",
+      "preLaunchTask": "Debug vcpkg commands"
+      "program": "${fileDirname}/../build/${fileBasenameNoExtension}-clang.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "c:\\msys64\\ucrt64\\bin\\gdb.exe",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "Build with clang++"
+    }
+  ]
+}
