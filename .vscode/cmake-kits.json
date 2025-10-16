@@ -1,0 +1,22 @@
+[
+  {
+    "name": "GCC GCC/G++ for UCRT64",
+    "compilers": {
+      "C": "c:/msys64/ucrt64/bin/gcc.exe",
+      "CXX": "c:/msys64/ucrt64/bin/g++.exe"
+    },
+    "preferredGenerator": {
+      "name": "MinGW Makefiles"
+    }
+  },
+  {
+    "name": "Clang++ for UCRT64",
+    "compilers": {
+      "C": "c:/msys64/ucrt64/bin/clang.exe",
+      "CXX": "c:/msys64/ucrt64/bin/clang++.exe"
+    },
+    "preferredGenerator": {
+      "name": "MinGW Makefiles"
+    }
+  }
+]
