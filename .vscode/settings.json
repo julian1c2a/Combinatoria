@@ -1,7 +1,8 @@
 {
   // Asocia los archivos .cpp con el lenguaje c++
   "files.associations": {
-    "*.cpp": "cpp"
+    "*.cpp": "cpp",
+    "*.hpp": "cpp"
   },
   // Indica a la extensión C/C++ que use la configuración de CMake Tools para IntelliSense
   "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
