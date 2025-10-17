@@ -62,7 +62,7 @@ std::ostream& operator<<(std::ostream& os, ulllint_t value) {
 
 constexpr ulllint_t factorial(ulllint_t n) noexcept
 {
-	if (n < 2) return 1;
+	if      (n  < 2) return 1;
     else if(n == 2) return 2;
     else if (n == 3) return 6;
 	else if (n == 4) return 24;
