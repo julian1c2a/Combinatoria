@@ -1,5 +1,5 @@
 {
-    "C_Cpp.default.compilerPath": "C:/MSys64/ucrt64/bin/g++.exe",
+    "C_Cpp.default.compilerPath": "C:\\msys64\\ucrt64\\bin\\g++.exe",
     "C_Cpp.default.cppStandard": "gnu++23",
     "C_Cpp.default.enableConfigurationSquiggles": true,
     "C_Cpp.default.includePath": [

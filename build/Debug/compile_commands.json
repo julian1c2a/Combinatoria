@@ -1,0 +1,8 @@
+[
+{
+  "directory": "E:/Dropbox/GitHub/CppProjects/NumericAlgorithms/Combinatoria/build/Debug",
+  "command": "c:\\msys64\\ucrt64\\bin\\g++.exe   -g -std=gnu++23 -o CMakeFiles\\Combinatoria.dir\\main.cpp.obj -c E:\\Dropbox\\GitHub\\CppProjects\\NumericAlgorithms\\Combinatoria\\main.cpp",
+  "file": "E:/Dropbox/GitHub/CppProjects/NumericAlgorithms/Combinatoria/main.cpp",
+  "output": "CMakeFiles/Combinatoria.dir/main.cpp.obj"
+}
+]
