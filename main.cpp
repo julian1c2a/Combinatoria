@@ -1,106 +1,149 @@
-
 #include <iostream>
-#include <cstdint>
-#include <string>
-#include <algorithm>
+
+#include <iomanip>
+
+#include <complex>
+
 #include <cmath>
+
 #include <numbers>
 
-using ulllint_t = __uint128_t;
-using lllint_t  = __int128_t;
-using ullint_t  = std::uint64_t;
-using llint_t   = std::int64_t;
-using std::size_t;
+#include <vector>
 
-std::ostream& operator<< (std::ostream& os, lllint_t value) {
-    if (value == 0) {
-        return os << "0";
+#include "binomial.hpp"
+
+using ldbl_complex = std::complex<long double>;
+
+/**using llint = std::int64_t;
+
+ * @brief Programa principal que demuestra el uso del módulo binomial    else if (n == 18) return 6402373705728000;
+
+ */
+
+using ldbl_complex = std::complex<long double>;
+
+int main() {        for (ulllint i = 2; i <= n; ++i) {
+
+    std::cout << "🧮 DEMO DEL MÓDULO BINOMIAL" << std::endl;
+
+    std::cout << "============================" << std::endl;
+
+    // Parte 1: Números complejos (código original)
+
+    std::cout << "\n--- Números Complejos ---" << std::endl;}
+
+    ldbl_complex z1(3.0, 4.0);
+
+    ldbl_complex z2(1.5, -2.5);
+
+    ldbl_complex sum = z1 + z2;    
+
+    std::cout << std::fixed << std::setprecision(2);
+
+    std::cout << "z1 = " << z1 << std::endl;
+
+    std::cout << "z2 = " << z2 << std::endl;
+
+    std::cout << "Sum = " << sum << std::endl;
+
+    // Parte 2: Demostrando factoriales
+
+    std::cout << "\n--- Factoriales ---" << std::endl;
+
+    std::cout << "Factorial of 8 = " << static_cast<unsigned long long>(fact(8)) << std::endl;
+
+    std::cout << "Factorial of 20 = " << static_cast<unsigned long long>(fact(20)) << std::endl;
+
+    // Parte 3: Coeficientes binomiales C(8,k)
+
+    std::cout << "\n--- Coeficientes Binomiales C(8,k) ---" << std::endl;
+
+    for (int k = 0; k <= 9; ++k) {
+        if (k > n-k) k = n - k; // Use symmetry property
+
+    for (int k = 0; k <= 9; ++k) {
+        ullint result{(n-k+1)/k};
+
+        if (k <= 8) {
+            for(int i = 1; i <= k; ++i) {
+
+            std::cout << "Binomial coefficient C(8, " << k << ") = " << result << std::endl;
+        }
+
+        } else {
+            std::cout << "Binomial coefficient C(8, " << k << ") = " << result << std::endl;
+        }
+
     }
 
-    std::string s = "";
-    bool negative = false;
-    if (value < 0) {
-        negative = true;
-        value = -value;
-    }
+    // Parte 4: Casos más grandes
+    ldbl_complex z1(3.0, 4.0);
+    ldbl_complex z2(1.5, -2.5);
 
-    while (value > 0) {
-        s += (char)('0' + (value % 10));
-        value /= 10;
-    }
+    std::cout << "\n--- Casos Más Grandes ---" << std::endl;
 
-    if (negative) {
-        s += '-';
-    }
+    std::cout << "Binomial coefficient C(20, 10) = " << binom(20, 10) << std::endl;
 
-    std::reverse(s.begin(), s.end());
+    std::cout << "Binomial coefficient C(30, 15) = " << binom_optimized(30, 15) << std::endl;
 
-    os << s;
+    std::cout << "Binomial coefficient C(52, 5) = " << binom_optimized(52, 5) 
 
-    return os;
+              << " (combinaciones de poker)" << std::endl;    
+    
+    std::cout << std::fixed << std::setprecision(2);
+
+    //std::cout << "z1 = " << z1 << std::endl;
+
+    // Parte 5: Triángulo de Pascal pequeño
+
+    std::cout << "\n--- Triángulo de Pascal (5 filas) ---" << std::endl;
+
+    for (int n = 0; n <= 5; ++n) {
+
+        std::vector<ullint> row(n + 1);
+        std::cout << "Factorial of 8 = " << static_cast<unsigned long long>(fact(8ULL)) << std::endl;
+
+        pascal_row(n, row.data());
+        std::cout << "Binomial coefficient C(8, 0) = " << static_cast<unsigned long long>(binom(8ULL, 0ULL)) << std::endl;
+
+        std::cout << "Binomial coefficient C(8, 1) = " << static_cast<unsigned long long>(binom(8ULL, 1ULL)) << std::endl;
+
+        // Centrar
+        std::cout << "Binomial coefficient C(8, 2) = " << static_cast<unsigned long long>(binom(8ULL, 2ULL)) << std::endl;
+
+        for (int space = 0; space < (5 - n) * 2; ++space) {
+            std::cout << "Binomial coefficient C(8, 3) = " << static_cast<unsigned long long>(binom(8ULL, 3ULL)) << std::endl;
+
+            std::cout << " ";    
+            
+            std::cout << "Binomial coefficient C(8, 4) = " << static_cast<unsigned long long>(binom(8ULL, 4ULL)) << std::endl;
+
+        }    
+        
+        std::cout << "Binomial coefficient C(8, 5) = " << static_cast<unsigned long long>(binom(8ULL, 5ULL)) << std::endl;
+
+        std::cout << "Binomial coefficient C(8, 6) = " << static_cast<unsigned long long>(binom(8ULL, 6ULL)) << std::endl;
+
+        for (int k = 0; k <= n; ++k) {
+            std::cout << "Binomial coefficient C(8, 7) = " << static_cast<unsigned long long>(binom(8ULL, 7ULL)) << std::endl;
+
+            std::cout << std::setw(4) << row[k];
+            
+            std::cout << "Binomial coefficient C(8, 8) = " << static_cast<unsigned long long>(binom(8ULL, 8ULL)) << std::endl;
+
+        }    
+        
+        std::cout << "Binomial coefficient C(8, 9) = " << static_cast<unsigned long long>(binom(8ULL, 9ULL)) << std::endl;
+
+        std::cout << std::endl;    std::cout << "Factorial of 20 = " << static_cast<unsigned long long>(fact(20ULL)) << std::endl;
+
+    }    
+    
+    std::cout << "Binomial coefficient C(20, 10) = " << static_cast<unsigned long long>(binom(20ULL, 10ULL)) << std::endl;
+
+    std::cout << "\n✅ Demo completada. Usa binomial.hpp y binomial.cpp en tus proyectos!" << std::endl;
+    return 0;
+
 }
 
-std::ostream& operator<<(std::ostream& os, ulllint_t value) {
-
-    if (value == 0) {
-        return os << "0";
-    }
-
-    std::string s = "";
-
-    while (value > 0) {
-        s += (char)('0' + (value % 10));
-        value /= 10;
-    }
-
-    std::reverse(s.begin(), s.end());
-
-    os << s;
-
-    return os;
-}
-
-constexpr ulllint_t factorial(ulllint_t n) noexcept
-{
-    if      (n  < 2) return 1ULL;
-    else if (n == 2) return 2ULL;
-    else if (n == 3) return 6ULL;
-    else if (n == 4) return 24ULL;
-    else if (n == 5) return 120ULL;
-    else if (n == 6) return 720ULL;
-    else if (n == 7) return 5040ULL;
-    else if (n == 8) return 40320ULL;
-    else if (n == 9) return 362880ULL;
-    else if (n == 10) return 3628800ULL;
-    else if (n == 11) return 39916800ULL;
-    else if (n == 12) return 479001600ULL;
-    else if (n == 13) return 6227020800ULL;
-    else if (n == 14) return 87178291200ULL;
-    else if (n == 15) return 1307674368000ULL;
-    else if (n == 16) return 20922789888000ULL;
-    else if (n == 17) return 355687428096000ULL;
-    else if (n == 18) return 6402373705728000ULL;
-    else if (n == 19) return 121645100408832000ULL;
-    else if (n == 20) return 2432902008176640000ULL;
-    else if (n < 35) {
-        ulllint_t result = 1ULL;
-        for (ulllint_t i = 2ULL; i <= n; ++i)
-            result *= i;
-        return result;
-    }
-    else return 0ULL; // Placeholder for large n factorial calculation: OVERFLOW
-}
-
-int main()
-{
-    for(size_t i = 0; i < 35; ++i)
-        std::cout << i << "! = " << factorial(i) << '\n';
-    std::cout << std::flush;
-    std::cout << std::endl;
-    for(size_t i = 35; i < 50; ++i)
-        std::cout << i << "! = " << factorial(i) << '\n';
-    std::cout << std::flush;
-    std::cout << std::endl;
-
-	return 0;
 }

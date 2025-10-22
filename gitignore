@@ -1,0 +1,50 @@
+# Archivos compilados
+*.exe
+*.obj
+*.o
+*.dll
+*.lib
+*.a
+*.so
+
+# Archivos temporales del compilador
+*.tmp
+*.temp
+*.log
+
+# Archivos de depuración
+*.pdb
+*.ilk
+
+# Directorios de build
+build/
+bin/
+obj/
+Debug/
+Release/
+
+# Archivos de VS Code específicos del usuario
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+.vscode/c_cpp_properties.json
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Archivos de backup
+*.bak
+*.backup
+
+# Archivos de logs y resultados de benchmarks
+*.csv
+benchmark_results.csv
+
+# Archivos temporales de Windows
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/

@@ -1,0 +1,13 @@
+{
+    "terminal.integrated.env.windows": {
+        "PATH": "c:/msys64/ucrt64/bin;${env:PATH}"
+    },
+    "C_Cpp.default.compilerPath": "c:/msys64/ucrt64/bin/g++.exe",
+    "C_Cpp.default.cppStandard": "c++23",
+    "C_Cpp.default.intelliSenseMode": "gcc-x64",
+    "files.associations": {
+        "*.cpp": "cpp",
+        "*.h": "c",
+        "*.hpp": "cpp"
+    }
+}
